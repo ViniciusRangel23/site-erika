@@ -122,7 +122,7 @@ a.button-light:hover { color: var(--ink-deep); background: #f6fbfd; }
 .button-light:disabled { cursor: default; }
 .site-footer { padding-block: clamp(40px, 3.25vw, 52px) clamp(48px, 7vw, 108px); background: var(--ink-deep); color: #f0f4f6; border-top: 1px solid var(--muted); }
 .footer-inner { display: grid; align-items: start; grid-template-columns: max-content minmax(0, 1fr); gap: clamp(27px, 4.9vw, 76px); }
-.site-footer .brand { width: clamp(146px, 15vw, 220px); }
+.site-footer .brand { width: clamp(160px, 16.5vw, 242px); }
 .footer-content { display: grid; gap: clamp(24px, 3.6vw, 52px); padding-top: 20px; }
 .footer-top, .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 15px 24px; }
 .footer-nav { gap: 10px clamp(12px, 1.3vw, 21px); font-size: 13px; }
