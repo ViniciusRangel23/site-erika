@@ -82,10 +82,10 @@ button, summary { cursor: pointer; }
 .cards-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .treatment-card { display: flex; min-width: 0; flex-direction: column; border: 1px solid var(--line); background: #fff; }
 .card-image { position: relative; aspect-ratio: 1.58; overflow: hidden; background: #e8ded6; }
-.card-image img { object-fit: cover; transition: transform .3s ease; }
-.treatment-card:focus-within .card-image img { transform: scale(1.045); }
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .treatment-card:hover .card-image img { transform: scale(1.045); transition-delay: 180ms; }
+.card-image img { object-fit: cover; transition: transform 500ms ease-in-out; }
+.treatment-card:focus-within .card-image img { transform: scale(1.06); }
+@media (any-hover: hover) {
+  .treatment-card:hover .card-image img { transform: scale(1.06); }
 }
 .card-content { padding: clamp(10px, 1.22vw, 19px); }
 .card-content h3 { font-size: clamp(16px, 1.43vw, 23px); line-height: 1.14; letter-spacing: -.035em; }
@@ -197,5 +197,5 @@ body:has(.treatment-dialog[open]) { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: .01ms !important; }
+  *:not(.card-image img), *::before, *::after { transition-duration: .01ms !important; }
 }
