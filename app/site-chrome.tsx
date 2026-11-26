@@ -63,7 +63,7 @@ export function SiteFooter() {
       icon: (
         <span className="whatsapp-icon" aria-hidden="true">
           <MessageCircle size={25} />
-          <Phone size={11} />
+          <Phone size={13} fill="currentColor" strokeWidth={1.25} />
         </span>
       ),
     },

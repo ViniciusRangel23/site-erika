@@ -33,15 +33,19 @@ export default function Home() {
             <p className="hero-description">Uma abordagem individualizada para a saúde da pele, dos cabelos e das unhas, respeitando as particularidades de cada pessoa.</p>
             <a href="#contato" className="button button-dark">Agendar consulta <ArrowRight size={17} aria-hidden="true" /></a>
           </div>
-          <div className="hero-portrait">
-            <Image src={imagePath("dra-erika-consultorio")} alt="Dra. Erika Lucena no consultório" fill preload sizes="(max-width: 767px) 100vw, 55vw" />
-          </div>
         </div>
+        <figure className="hero-portrait">
+          <Image src={imagePath("consultorio-panoramico")} alt="Profissional de jaleco branco sentada à mesa de um consultório" fill preload sizes="100vw" />
+          <figcaption className="portrait-credit">Imagem ilustrativa gerada por IA</figcaption>
+        </figure>
       </section>
 
       <section id="sobre" className="about-band" aria-labelledby="about-title">
         <div className="shell about-inner">
-          <Image src={imagePath("dra-erika-retrato")} alt="Retrato da Dra. Erika Lucena" width={770} height={1100} sizes="(max-width: 767px) 220px, 300px" className="about-portrait" />
+          <figure className="about-portrait">
+            <Image src={imagePath("retrato-ilustrativo")} alt="Profissional de jaleco branco em um consultório" width={768} height={960} sizes="(max-width: 767px) 220px, 300px" />
+            <figcaption className="portrait-credit">Imagem ilustrativa gerada por IA</figcaption>
+          </figure>
           <div className="band-intro">
             <p className="eyebrow eyebrow-line">Sobre a Dra. Erika Lucena</p>
             <h2 id="about-title">Uma trajetória dedicada ao cuidado.</h2>
