@@ -25,15 +25,29 @@ export default function Home() {
 
   return (
     <main id="conteudo">
-      <section id="sobre" className="hero" aria-labelledby="hero-title">
-        <Image src={imagePath("hero")} alt="" className="hero-image" fill preload sizes="100vw" />
-        <div className="hero-overlay" />
-        <div className="shell hero-inner relative">
-          <p className="eyebrow eyebrow-line">Tratamentos</p>
-          <h1 id="hero-title">Soluções personalizadas<br className="hidden sm:block" /> para a saúde da sua pele.</h1>
-          <span className="hero-rule" aria-hidden="true" />
-          <p className="hero-description">Combinando ciência e tecnologia, oferecemos tratamentos individualizados para cuidar da sua pele, dos cabelos e das unhas, em todas as fases da vida.</p>
-          <a href="#tratamentos" className="hero-link">Explore os tratamentos <ArrowDown size={16} aria-hidden="true" /></a>
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="shell hero-inner">
+          <div className="hero-copy">
+            <p className="eyebrow eyebrow-line">Dermatologia clínica, estética e cirúrgica</p>
+            <h1 id="hero-title">Ciência, cuidado e naturalidade em cada detalhe.</h1>
+            <p className="hero-description">Uma abordagem individualizada para a saúde da pele, dos cabelos e das unhas, respeitando as particularidades de cada pessoa.</p>
+            <a href="#contato" className="button button-dark">Agendar consulta <ArrowRight size={17} aria-hidden="true" /></a>
+          </div>
+          <div className="hero-portrait">
+            <Image src={imagePath("dra-erika-consultorio")} alt="Dra. Erika Lucena no consultório" fill preload sizes="(max-width: 767px) 100vw, 55vw" />
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre" className="about-band" aria-labelledby="about-title">
+        <div className="shell about-inner">
+          <Image src={imagePath("dra-erika-retrato")} alt="Retrato da Dra. Erika Lucena" width={770} height={1100} sizes="(max-width: 767px) 220px, 300px" className="about-portrait" />
+          <div className="band-intro">
+            <p className="eyebrow eyebrow-line">Sobre a Dra. Erika Lucena</p>
+            <h2 id="about-title">Uma trajetória dedicada ao cuidado.</h2>
+            <p className="band-description">A Dra. Erika Lucena atua nos cuidados com a pele, os cabelos e as unhas. Na consulta, a escuta e a avaliação dermatológica orientam um plano de cuidado que considera as necessidades de cada pessoa.</p>
+            <a href="#tratamentos" className="hero-link">Explore os tratamentos <ArrowDown size={16} aria-hidden="true" /></a>
+          </div>
         </div>
       </section>
 
