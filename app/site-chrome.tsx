@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Clock3, Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 import { MobileNavigation } from "./interactions";
+import { imagePath } from "./images";
 
 const links = [
   { label: "Sobre", href: "/#sobre" },
@@ -12,11 +14,16 @@ const links = [
   { label: "Contato", href: "/#contato" },
 ];
 
-function Brand() {
+function Brand({ onDark = false }: { onDark?: boolean }) {
   return (
     <Link className="brand" href="/" aria-label="Erika Lucena Dermatologia, início">
-      <span aria-hidden="true" className="brand-monogram"><span>E</span><span>L</span></span>
-      <span className="brand-name">Erika Lucena <small>Dermatologia</small></span>
+      <Image
+        src={imagePath(onDark ? "erika-logo-light" : "erika-logo-dark")}
+        alt=""
+        width={onDark ? 660 : 420}
+        height={onDark ? 443 : 282}
+        loading={onDark ? "lazy" : "eager"}
+      />
     </Link>
   );
 }
@@ -65,7 +72,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="shell footer-inner">
-        <Brand />
+        <Brand onDark />
         <div className="footer-content">
           <div className="footer-top">
             <nav className="footer-nav flex flex-wrap" aria-label="Navegação do rodapé">
